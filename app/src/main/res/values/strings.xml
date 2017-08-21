@@ -1,8 +1,27 @@
 <resources>
-  <string name="app_name">Tansik</string>
+    <string name="app_name">Tansik</string>
 
-  <string name="navigation_drawer_open">Open navigation drawer</string>
-  <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
-  <string name="action_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="degrees_radiobtn">Degrees</string>
+    <string name="percentage_radiobtn">Percentage</string>
+    <string name="degrees_hint">Score by degrees</string>
+    <string name="percentage_hint">Score by percentage</string>
+    <string name="equaltext">Equals</string>
+    <string name="loading">Loading...</string>
+    <string name="tansik_calc_title">Tansik Calculator</string>
+
+
+    <array name="demo_year_list">
+        <item>2017</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2013</item>
+    </array>
+
+
 </resources>
