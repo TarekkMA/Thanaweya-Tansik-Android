@@ -1,4 +1,4 @@
-package com.tmaprojects.tansik;
+package com.tmaprojects.tansik.messaging;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -14,6 +14,7 @@ import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.tmaprojects.tansik.R;
 import com.tmaprojects.tansik.networking.FirebaseManager;
 import com.tmaprojects.tansik.views.MainActivity;
 

@@ -1,4 +1,4 @@
-package com.tmaprojects.tansik;
+package com.tmaprojects.tansik.messaging;
 
 import android.app.Service;
 import android.util.Log;

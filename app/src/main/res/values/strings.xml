@@ -16,12 +16,20 @@
     <string name="tansik_calc_title">Tansik Calculator</string>
 
 
+    <array name="tracks">
+        <item>Science</item>
+        <item>Literature</item>
+    </array>
+
     <array name="demo_year_list">
         <item>2017</item>
         <item>2015</item>
         <item>2016</item>
         <item>2013</item>
     </array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
 
 
 </resources>
