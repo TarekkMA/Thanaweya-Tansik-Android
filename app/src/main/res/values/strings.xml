@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">Tansik</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
 
 
@@ -34,7 +31,15 @@
     <string name="enter_your_score">Enter your score</string>
     <string name="science_track">Science track</string>
     <string name="literature_track">Literature track</string>
-    <string name="convert_btn_percent">%</string>
+    <string name="convert_btn_percent" translatable="false">%</string>
+    <string name="select_track">Select Track</string>
+    <string name="err_years_list">Error retrieving years list</string>
+    <string name="ok">Ok</string>
+    <string name="select_tansik_year">Select Tansik Year :</string>
+    <string name="err_exceed_100p">Input shouldn\'t exceed 100%</string>
+    <string name="err_exceed_410">Input shouldn\'t exceed 410</string>
+    <string name="select_year_first">Select year first</string>
+    <string name="err_busy_downloding_tables">Downloading tansik tables. Please try again later</string>
 
 
 </resources>

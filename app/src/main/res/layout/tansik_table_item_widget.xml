@@ -11,9 +11,9 @@
         android:layout_weight="4"
         android:layout_height="wrap_content"
         tools:text="الجامعة العربية الحره المصرية الجديدة الطويله الحلوة"
-        android:textColor="#000"
+        android:textColor="@color/black"
         android:layout_gravity="center"
-        android:textSize="14sp"
+        android:textSize="@dimen/smaller_text"
         android:gravity="center"/>
 
 
@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         tools:text="564"
         android:gravity="center"
-        android:textSize="16sp"
-        android:textColor="#000"
+        android:textSize="@dimen/small_text"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_gravity="center"/>
 

@@ -96,7 +96,7 @@ public class TansikTableAppWidgetConfigureActivity extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, final int position, long i){
                         new MaterialDialog.Builder(context)
-                                .title("Select Track")
+                                .title(R.string.select_track)
                                 .items(R.array.tracks)
                                 .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallbackSingleChoice() {
                                     @Override
@@ -124,9 +124,9 @@ public class TansikTableAppWidgetConfigureActivity extends Activity {
             @Override
             public void onError(String massage) {
                 new MaterialDialog.Builder(TansikTableAppWidgetConfigureActivity.this)
-                        .title("Error retrieving years list")
+                        .title(R.string.err_years_list)
                         .content(massage)
-                        .positiveText("Ok")
+                        .positiveText(R.string.ok)
                         .show();
             }
         });

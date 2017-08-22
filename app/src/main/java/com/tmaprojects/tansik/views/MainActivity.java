@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(inputMethod == InputMethod.PERCENTAGE){
             if(score > 100){
-                scoreInputLayout.setError("Input shouldn't exceed 100%");
+                scoreInputLayout.setError(getString(R.string.err_exceed_100p));
                 scoreInputLayout.setErrorEnabled(true);
                 return;
             }
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
         }else if(inputMethod == InputMethod.DEGREES){
             if(score > MAX_SCORE){
-                scoreInputLayout.setError("Input shouldn't exceed 100%");
+                scoreInputLayout.setError(getString(R.string.err_exceed_410));
                 scoreInputLayout.setErrorEnabled(true);
                 return;
             }
@@ -180,9 +180,9 @@ public class MainActivity extends AppCompatActivity {
     void tansikButtonClicked(Button btn){
         TansikLocal localStore = TansikLocal.getInstance();
         if(selectedPos == -1){
-            Toast.makeText(this, "Select year first", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.select_year_first, Toast.LENGTH_SHORT).show();
         }else if(!localStore.checkYear(yearList.get(selectedPos))){
-            Toast.makeText(this, "Downloading tansik tables. Please try again later", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.err_busy_downloding_tables, Toast.LENGTH_SHORT).show();
         }else{
             int year = yearList.get(selectedPos);
             Track track = (btn.getId()==R.id.science_btn) ? Track.SCIENCE : Track.LITERATURE;
