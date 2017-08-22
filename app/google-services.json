@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "360028818285",
+    "firebase_url": "https://tansik-thanaweya-amma.firebaseio.com",
+    "project_id": "tansik-thanaweya-amma",
+    "storage_bucket": "tansik-thanaweya-amma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360028818285:android:d16eb4e08fb3123b",
+        "android_client_info": {
+          "package_name": "com.tmaprojects.tansik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360028818285-ku58h7g5d74sb94dsg7mnuqka5eedomp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoXqykqRc90tIZeU2FHvuJGRQViPekOY4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
