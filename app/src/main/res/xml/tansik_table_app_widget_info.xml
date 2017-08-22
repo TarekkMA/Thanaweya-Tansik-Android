@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:configure="com.tmaprojects.tansik.TansikTableAppWidgetConfigureActivity"
+    android:configure="com.tmaprojects.tansik.widget.TansikTableAppWidgetConfigureActivity"
     android:initialKeyguardLayout="@layout/tansik_table_app_widget"
     android:initialLayout="@layout/tansik_table_app_widget"
     android:minHeight="180dp"
@@ -8,4 +8,4 @@
     android:previewImage="@drawable/example_appwidget_preview"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="86400000"
-    android:widgetCategory="home_screen"></appwidget-provider>
+    android:widgetCategory="home_screen"/>

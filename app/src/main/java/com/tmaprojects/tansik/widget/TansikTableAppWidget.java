@@ -1,4 +1,4 @@
-package com.tmaprojects.tansik;
+package com.tmaprojects.tansik.widget;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -8,6 +8,7 @@ import android.util.Pair;
 import android.widget.RemoteViews;
 
 import com.google.gson.Gson;
+import com.tmaprojects.tansik.R;
 import com.tmaprojects.tansik.io.TansikLocal;
 import com.tmaprojects.tansik.model.TansikYear;
 import com.tmaprojects.tansik.model.Track;

@@ -1,6 +1,7 @@
 package com.tmaprojects.tansik.views;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.tmaprojects.tansik.R;
+import com.tmaprojects.tansik.icepick_bundlers.ArrayListBundler;
 import com.tmaprojects.tansik.utils.Utils;
 import com.tmaprojects.tansik.io.TansikLocal;
 import com.tmaprojects.tansik.model.Track;
@@ -27,6 +29,8 @@ import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnItemSelected;
 import butterknife.OnTextChanged;
+import icepick.Icepick;
+import icepick.State;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
     double score;
     double scoreD = 0;
 
+    @State
     int selectedPos = -1;
+    @State(ArrayListBundler.class)
     List<Integer> yearList = new ArrayList<>();
 
     @BindView(R.id.converted_txt)
@@ -59,27 +65,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Icepick.restoreInstanceState(this, savedInstanceState);
         ButterKnife.bind(this);
 
-        loadingDialog = new MaterialDialog.Builder(this)
-                .title(R.string.loading)
-                .progress(true, 0)
-                .cancelable(false)
-                .show();
 
-        getTablesFromFirebase();
+
+        if(savedInstanceState!=null){
+            fillSpinnerData(yearList,selectedPos);
+        }else{
+            loadingDialog = new MaterialDialog.Builder(this)
+                    .title(R.string.loading)
+                    .progress(true, 0)
+                    .cancelable(false)
+                    .show();
+            getTablesFromFirebase();
+        }
     }
+
+    @Override public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Icepick.saveInstanceState(this, outState);
+    }
+
 
     private void getTablesFromFirebase(){
         FirebaseManager.getTansikYears(new FirebaseManager.TansikRequestListener() {
             @Override
             public void onTansikRetrived(List<Integer> tansikYears) {
                 yearList = tansikYears;
-                ArrayAdapter<Integer> adapter;
-                adapter = new ArrayAdapter<Integer>(getApplicationContext(), R.layout.spinner_text_layout, tansikYears);
-                adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-                yearSpinner.setAdapter(adapter);
-
+                fillSpinnerData(yearList,0);
                 loadingDialog.dismiss();
             }
 
@@ -89,6 +103,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void fillSpinnerData(List<Integer> yearList,int selectedPos){
+        ArrayAdapter<Integer> adapter;
+        adapter = new ArrayAdapter<Integer>(getApplicationContext(), R.layout.spinner_text_layout, yearList);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        yearSpinner.setAdapter(adapter);
+        yearSpinner.setSelection(selectedPos);
+    }
+
 
     @OnCheckedChanged(R.id.degrees_radiobtn)
     void inputMethodChangedD(boolean c){

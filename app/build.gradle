@@ -15,8 +15,8 @@ android {
         applicationId "com.tmaprojects.tansik"
         minSdkVersion 17
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 25
+        versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -34,10 +34,10 @@ android {
 allprojects {
     repositories {
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
+        maven { url "https://maven.google.com" }
+        maven {url "https://clojars.org/repo/"}
     }
+
 }
 
 dependencies {
@@ -59,6 +59,8 @@ dependencies {
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'com.afollestad.material-dialogs:core:0.9.4.7'
     compile 'com.google.guava:guava:23.0-android'
+    compile 'frankiesardo:icepick:3.2.0'
+    provided 'frankiesardo:icepick-processor:3.2.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

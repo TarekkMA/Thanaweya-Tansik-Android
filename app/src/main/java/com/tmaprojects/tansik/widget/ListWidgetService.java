@@ -1,4 +1,4 @@
-package com.tmaprojects.tansik;
+package com.tmaprojects.tansik.widget;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.widget.RemoteViewsService;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.tmaprojects.tansik.R;
 import com.tmaprojects.tansik.model.TableItem;
 
 import java.util.ArrayList;

@@ -30,10 +30,10 @@
             </intent-filter>
         </service>
         <service
-            android:name=".ListWidgetService"
+            android:name=".widget.ListWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS"
             />
-        <receiver android:name=".TansikTableAppWidget">
+        <receiver android:name=".widget.TansikTableAppWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -43,7 +43,7 @@
                 android:resource="@xml/tansik_table_app_widget_info" />
         </receiver>
 
-        <activity android:name=".TansikTableAppWidgetConfigureActivity">
+        <activity android:name=".widget.TansikTableAppWidgetConfigureActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>

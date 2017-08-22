@@ -30,6 +30,11 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="configure">Configure</string>
     <string name="add_widget">Add widget</string>
+    <string name="year_text">Year :</string>
+    <string name="enter_your_score">Enter your score</string>
+    <string name="science_track">Science track</string>
+    <string name="literature_track">Literature track</string>
+    <string name="convert_btn_percent">%</string>
 
 
 </resources>

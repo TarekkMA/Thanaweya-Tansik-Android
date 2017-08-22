@@ -24,10 +24,6 @@ import butterknife.OnClick;
 
 public class TansikTableActivity extends AppCompatActivity {
 
-    @BindView(R.id.filter_btn)
-    Button filterButton;
-    @BindView(R.id.filter_txt)
-    TextView filterText;
     @BindView(R.id.score_txt)
     TextView scoreText;
     @BindView(R.id.convert_btn)

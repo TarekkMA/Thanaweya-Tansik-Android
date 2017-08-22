@@ -1,4 +1,4 @@
-package com.tmaprojects.tansik;
+package com.tmaprojects.tansik.widget;
 
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.tmaprojects.tansik.R;
 import com.tmaprojects.tansik.networking.FirebaseManager;
 
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.List;
  */
 public class TansikTableAppWidgetConfigureActivity extends Activity {
 
-    private static final String PREFS_NAME = "com.tmaprojects.tansik.TansikTableAppWidget";
+    private static final String PREFS_NAME = "com.tmaprojects.tansik.widget.TansikTableAppWidget";
     private static final String PREF_PREFIX_KEY = "appwidget_";
     int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 
