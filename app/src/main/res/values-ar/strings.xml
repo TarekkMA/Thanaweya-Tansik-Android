@@ -24,4 +24,6 @@
     <string name="select_year_first">أختر السنة أولا</string>
     <string name="tansik_calc_title">حساب التنسيق</string>
     <string name="year_text">"سنة : "</string>
+    <string name="incorrect_format">تنسيق خطأ</string>
+    <string name="your_score">"مجموعك : "</string>
 </resources>

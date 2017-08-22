@@ -40,6 +40,8 @@
     <string name="err_exceed_410">Input shouldn\'t exceed 410</string>
     <string name="select_year_first">Select year first</string>
     <string name="err_busy_downloding_tables">Downloading tansik tables. Please try again later</string>
+    <string name="your_score">Your Score :</string>
+    <string name="incorrect_format">Incorrect Format !</string>
 
 
 </resources>

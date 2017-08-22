@@ -42,6 +42,11 @@ public class FirebaseManager {
         void onError(String massage);
     }
 
+    /**
+     * Retrieve (online if possible) list of integers representing TansikYear and start downloading them in the background
+     *
+     * @param listener callback in case of success of failure
+     */
     public static void getTansikYears(final TansikRequestListener listener) {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference yearsRef = database.getReference().child(TANSIK_YEARS_KEY);
@@ -70,6 +75,11 @@ public class FirebaseManager {
         });
     }
 
+    /**
+     * Download in the background the json file for the TansikYear with specific id
+     *
+     * @param id id of the year that will be downloaded
+     */
     public static void startDownloadingTnasikYear(final String id){
         DatabaseReference yearRef = FirebaseDatabase.getInstance().getReference().child(TANSIK_YEARS_KEY).child(id);
         yearRef.addListenerForSingleValueEvent(new ValueEventListener() {

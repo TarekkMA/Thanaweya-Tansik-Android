@@ -82,7 +82,8 @@ public class TansikTableActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         if(scoreD>0) {
-            scoreText.setText("Your Score : " + String.valueOf(Utils.round(scoreD, 2)));
+            scoreText.setText(getString(R.string.your_score) + String.valueOf(Utils.round(scoreD, 2)));
+
             adapter.colorizeList(scoreD);
         }else{
             scoreConvertLayout.setVisibility(View.GONE);
@@ -99,7 +100,7 @@ public class TansikTableActivity extends AppCompatActivity {
     void convertScore(Button btn){
         viewAsPercent = !viewAsPercent;
         btn.setText((viewAsPercent) ? "%" : "/");
-        scoreText.setText("Your Score : " +
+        scoreText.setText(getString(R.string.your_score) +
                 ((viewAsPercent)?
                         String.valueOf(Utils.round(scoreD/410*100, 2)+"%") :
                         String.valueOf(Utils.round(scoreD, 2))));

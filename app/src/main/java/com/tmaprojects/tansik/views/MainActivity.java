@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             score = Double.parseDouble(s.toString());
         } catch (Exception e) {
             Timber.e(e,"Error parsing score");
-            scoreInputLayout.setError("Incorrect Format !");
+            scoreInputLayout.setError(getString(R.string.incorrect_format));
             scoreInputLayout.setErrorEnabled(true);
             return;
         }
